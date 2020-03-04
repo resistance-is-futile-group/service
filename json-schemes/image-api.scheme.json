@@ -1,0 +1,131 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Schema for image upload",
+    "description": "Contains all the information for uploading images required by the neural network",
+    "required": [
+        "meta",
+        "image"
+    ],
+    "properties": {
+        "meta": {
+            "$id": "#/properties/meta",
+            "type": "object",
+            "title": "The Meta Schema",
+            "description": "Information about the image",
+            "default": {},
+            "examples": [
+                {
+                    "image-width": 1280.0,
+                    "image-height": 1280.0,
+                    "labels": {
+                        "resistor-type": "ceramic",
+                        "resistor-value": 500000.0,
+                        "ring-count": 4.0
+                    },
+                    "image-type": "jpg"
+                }
+            ],
+            "required": [
+                "image-type",
+                "image-height",
+                "image-width",
+                "labels"
+            ],
+            "properties": {
+                "image-type": {
+                    "$id": "#/properties/meta/properties/image-type",
+                    "type": "string",
+                    "title": "The Image-type Schema",
+                    "description": "Contains file encoding",
+                    "default": "",
+                    "examples": [
+                        "jpg"
+                    ]
+                },
+                "image-height": {
+                    "$id": "#/properties/meta/properties/image-height",
+                    "type": "integer",
+                    "title": "The Image-height Schema",
+                    "description": "Contains image pixel height",
+                    "default": 0,
+                    "examples": [
+                        1280
+                    ]
+                },
+                "image-width": {
+                    "$id": "#/properties/meta/properties/image-width",
+                    "type": "integer",
+                    "title": "The Image-width Schema",
+                    "description": "Contains image pixel width",
+                    "default": 0,
+                    "examples": [
+                        1280
+                    ]
+                },
+                "labels": {
+                    "$id": "#/properties/meta/properties/labels",
+                    "type": "object",
+                    "title": "The Labels Schema",
+                    "description": "Dictionary containing labels for the image to be used by machine learning",
+                    "default": {},
+                    "examples": [
+                        {
+                            "ring-count": 4.0,
+                            "resistor-type": "ceramic",
+                            "resistor-value": 500000.0
+                        }
+                    ],
+                    "required": [
+                        "resistor-type",
+                        "resistor-value",
+                        "ring-count"
+                    ],
+                    "properties": {
+                        "resistor-type": {
+                            "$id": "#/properties/meta/properties/labels/properties/resistor-type",
+                            "type": "string",
+                            "title": "The Resistor-type Schema",
+                            "description": "Contains the resistory build type",
+                            "default": "",
+                            "examples": [
+                                "ceramic"
+                            ]
+                        },
+                        "resistor-value": {
+                            "$id": "#/properties/meta/properties/labels/properties/resistor-value",
+                            "type": "integer",
+                            "title": "The Resistor-value Schema",
+                            "description": "Ohm value of the resistor",
+                            "default": 0,
+                            "examples": [
+                                500000
+                            ]
+                        },
+                        "ring-count": {
+                            "$id": "#/properties/meta/properties/labels/properties/ring-count",
+                            "type": "integer",
+                            "title": "The Ring-count Schema",
+                            "description": "Count of rings the resistor contains (only valid for ceramic)",
+                            "default": 0,
+                            "examples": [
+                                4
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "image": {
+            "$id": "#/properties/image",
+            "type": "string",
+            "title": "The Image Schema",
+            "description": "Base64 encoded image data",
+            "default": "",
+            "examples": [
+                "base64=="
+            ]
+        }
+    }
+}

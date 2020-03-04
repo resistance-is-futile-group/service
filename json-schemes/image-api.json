@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "image-type": "jpg",
+    "image-height": 1280,
+    "image-width": 1280,
+    "labels": {
+  		"resistor-type": "ceramic",
+    	"resistor-value": 500000,
+    	"ring-count": 4
+	}
+  },
+  "image": "base64=="
+}
