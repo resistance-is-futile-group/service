@@ -13,7 +13,9 @@ Programming Language: Dart
 
 ### Business Logic
 
-The business logic should be accessible via REST interfaces. The Interface descriptions can be found under [json-schemes](./json-schemes/)
+The business logic should be accessible via REST interfaces. The Interface descriptions can be found under [json-schemes](./json-schemes/) [1]
+
+A tool to help create json-schemes can be found under [2]
 
 ### Image Database
 
@@ -26,4 +28,12 @@ A dedicated review webpage for user uploads. Here a review admin can see all pic
 ### Data Export Service
 
 A webservice that extracts the image information from the image database and converts it into the specified training format.
+
+
+
+# Sources
+
+[1] "Getting Started Step-By-Step" - json-schema.org accessed, 04/03/2020, [online](https://json-schema.org/learn/getting-started-step-by-step.html)
+
+[2] "JSONschema.net Tool" - accessed, 04/03/2020, [online](https://jsonschema.net/home)
 
