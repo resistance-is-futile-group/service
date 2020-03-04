@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   shelf: ^0.7.5
+  shelf_router: ^0.7.2
 
 dev_dependencies:
   pedantic: ^1.8.0
